@@ -15,3 +15,5 @@ Testler `artillery run DOSYA_ADI` şeklinde çalıştırılabilir.
 ### Node
 ![Screenshot 2023-10-03 142423](https://github.com/anileates/node-deno-bun-load-testing/assets/49078844/f7cbe869-d4fd-49ac-963d-8995f013ea36)
 
+### Bun
+![image](https://github.com/anileates/node-deno-bun-load-testing/assets/49078844/720082a6-c293-41bc-87a6-dd4cf62bb668)

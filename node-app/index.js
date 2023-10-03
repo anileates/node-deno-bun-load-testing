@@ -6,6 +6,6 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(3002, () => {
+    console.log('Node server is up on port 3002.')
 })

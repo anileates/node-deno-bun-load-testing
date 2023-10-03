@@ -1,0 +1,24 @@
+config:
+  # This is a test server run by team Artillery
+  # It's designed to be highly scalable
+  target: http://localhost:3002
+  phases:
+    - duration: 10
+      arrivalRate: 5
+      rampTo: 10
+      name: Warm up the API
+    # - duration: 10
+    #   arrivalRate: 10
+    #   rampTo: 50
+    #   name: Ramp up to peak load
+    # - duration: 20
+    #   arrivalRate: 50
+    #   name: Sustained peak load
+
+scenarios:
+  - name: Get Hello World
+    flow:
+      - loop:
+        - get:
+            url: "/"
+        count: 10

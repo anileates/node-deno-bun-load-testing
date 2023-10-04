@@ -19,12 +19,3 @@ Testler `artillery run DOSYA_ADI` şeklinde çalıştırılabilir.
 ![image](https://github.com/anileates/node-deno-bun-load-testing/assets/49078844/720082a6-c293-41bc-87a6-dd4cf62bb668)
 
 
-## I/O with Mongo
-### Node
-![node](https://github.com/anileates/node-deno-bun-load-testing/assets/49078844/79bca919-cf59-4291-8578-7c72408c01ce)
-
-### Deno
-![deno](https://github.com/anileates/node-deno-bun-load-testing/assets/49078844/e51761d0-73a1-41b9-aea0-dd53a9554ec4)
-
-### Bun
-![bun](https://github.com/anileates/node-deno-bun-load-testing/assets/49078844/e994ed09-d43d-456a-aee6-d4798aa5b57b)

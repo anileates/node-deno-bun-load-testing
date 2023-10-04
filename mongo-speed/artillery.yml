@@ -1,0 +1,26 @@
+config:
+  # This is a test server run by team Artillery
+  # It's designed to be highly scalable
+  target: http://localhost:3003
+  phases:
+    - duration: 30 # 30 saniye boyunca çalışacak
+      arrivalRate: 5 # Her saniye 5 kullanıcı oluşturacak
+      # rampTo:
+      name: Warm up the API
+    - duration: 30
+      arrivalRate: 100
+      rampTo: 200
+      name: Ramp up to peak load
+    # - duration: 20
+    #   arrivalRate: 50
+    #   name: Sustained peak load
+
+scenarios:
+  - name: Register
+    flow:
+      - post:
+          url: "/"
+          json:
+            name: "John"
+            surname: "Doe"
+            birthday: "1990-01-01"

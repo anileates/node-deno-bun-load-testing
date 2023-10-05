@@ -1,0 +1,18 @@
+config:
+  target: http://localhost:3000
+  phases:
+    - duration: 30 # 30 saniye boyunca çalışacak
+      arrivalRate: 1000 # Her saniye oluşturulacak kullanıcı sayısı
+      name: Warm up the API
+    - duration: 30
+      arrivalRate: 1000
+      rampTo: 1500
+      name: Ramp up to peak load
+
+scenarios:
+  - name: WebSocket Test
+    engine: ws # Enable the Socket.io engine
+    flow:
+      - send: # https://www.artillery.io/docs/reference/engines/websocket#sending-data
+          name: "anil"
+          surname: "ates"

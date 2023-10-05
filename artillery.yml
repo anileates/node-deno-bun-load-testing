@@ -1,0 +1,18 @@
+config:
+  target: http://localhost:3001
+  phases:
+    - duration: 30 # 30 saniye boyunca çalışacak
+      arrivalRate: 1000 # Her saniye oluşturulacak kullanıcı sayısı
+      name: Warm up the API
+    - duration: 30
+      arrivalRate: 1000
+      rampTo: 2000
+      name: Ramp up to peak load
+
+scenarios:
+  - name: Get Hello World
+    flow:
+      - loop:
+        - get:
+            url: "/"
+        count: 10 # Her kullanıcı 10 istek gönder

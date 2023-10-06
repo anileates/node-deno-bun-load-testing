@@ -1,0 +1,38 @@
+config:
+  target: udp://localhost:2222
+  phases:
+    - duration: 30
+      arrivalRate: 10 
+      name: Warm up the API
+    - duration: 30
+      arrivalRate: 10
+      rampTo: 15
+      name: Ramp up to peak load
+
+scenarios:
+  - name: UDP Test
+    engine: "socketio" # Enable the Socket.io engine
+    flow:
+      - emit:
+          channel: "message"
+          data: "Hello World"
+
+
+# config:
+#   target: udp://localhost:2222
+#   phases:
+#     - duration: 30 # 30 saniye boyunca çalışacak
+#       arrivalRate: 10 # Her saniye oluşturulacak kullanıcı sayısı
+#       name: Warm up the API
+#     - duration: 30
+#       arrivalRate: 10
+#       rampTo: 15
+#       name: Ramp up to peak load
+
+# scenarios:
+#   - engine: ws
+#     name: Echo a string
+#     flow:
+#       - connect:
+#           function: "message"
+#       - send: "Hello from Artillery"
